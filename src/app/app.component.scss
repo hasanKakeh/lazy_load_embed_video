@@ -1,0 +1,28 @@
+input {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border:1px solid black;
+  outline: unset;
+  &.ng-invalid.ng-touched{
+    @extend .error;
+  }
+}
+form{
+  &.ng-submitted{
+    input.ng-invalid{
+     @extend .error;
+    }
+  }
+}
+.error{
+  border-color: red;
+}
+button{
+  all: unset;
+  display: block;
+  background-color: cadetblue;
+  border-radius: .5rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
